@@ -169,7 +169,16 @@ public class Wohnung
     
     public void printWohnung()
     {
-        System.out.println("Ort: " + ort + ", " + strasse + ", " + "Balkon: " + balkon);
+        if (balkon == true)
+        {
+            System.out.println(ort + " - " + anzZimmer + " Zimmer" + " - " + preis + " Euro" + " - " + "(Balkon)");
+        }
+        
+        else
+        {
+            System.out.println(ort + " - " + anzZimmer + " Zimmer" + " - " + preis + " Euro" + " - " + "(kein Balkon)");
+        }
+        
     }
     
 }
