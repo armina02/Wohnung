@@ -102,7 +102,16 @@ public class Wohnung
     
     public void setPreis(int preis)
     {
-        this.preis = preis; 
+        if((preis >=1000) && (preis <=200000))
+        {
+           this.preis = preis;
+        }
+        else
+        {
+            System.out.println("Fehler: Der gewünschte Preis ist nicht im Rahmen");
+            
+            this.preis = 200000;
+        }
     }
     
     public void setAnzZimmer(int anzZimmer)
