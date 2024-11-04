@@ -107,7 +107,19 @@ public class Wohnung
     
     public void setAnzZimmer(int anzZimmer)
     {
-        this.anzZimmer = anzZimmer;
+        if((anzZimmer >=1) && (anzZimmer <=7))
+        {
+            this.anzZimmer = anzZimmer;
+        }
+        
+        else
+        {
+            System.out.println("Fehler. Die gewünschte Anzahl an Zimmern, wird nicht angeboten. Muss zwischen 1 und 7 Zimmern liegen!");
+        
+            this.anzZimmer = 4;
+        }
+        
+        
     }
     
     public String getHausnummer()
